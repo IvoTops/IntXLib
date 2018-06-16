@@ -4,7 +4,7 @@ using NUnit.Framework;
 
 namespace IntXLib.Test
 {
-	[TestFixture]
+	
 	public class AddOpTest
 	{
 		[Test]
@@ -37,7 +37,7 @@ namespace IntXLib.Test
 			Assert.IsTrue(5 + intX == 8);
 		}
 		
-		[Test, ExpectedException(typeof(ArgumentNullException))]
+		[TestCase("", typeof(ArgumentNullException))]
 		public void AddNullIntX()
 		{
 			IntX int1 = new IntX(3);

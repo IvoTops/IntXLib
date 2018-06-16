@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace IntXLib.Test
 {
-	[TestFixture]
+	
 	public class ExplicitConvertOpTest
 	{
 		[Test]
@@ -107,34 +107,49 @@ namespace IntXLib.Test
 		}
 
 
-		[Test, ExpectedException(typeof(ArgumentNullException))]
+		[Test]
 		public void ConvertNullToInt()
 		{
-			int n = (int)(IntX)null;
+		    Assert.Throws<ArgumentNullException>(() =>
+		    {
+		        int n = (int) (IntX) null;
+		    });
 		}
 
-		[Test, ExpectedException(typeof(ArgumentNullException))]
-		public void ConvertNullToUint()
+	    [Test]
+        public void ConvertNullToUint()
 		{
-			uint n = (uint)(IntX)null;
+		    Assert.Throws<ArgumentNullException>(() =>
+		    {
+		        uint n = (uint) (IntX) null;
+		    });
 		}
 
-		[Test, ExpectedException(typeof(ArgumentNullException))]
-		public void ConvertNullToLong()
-		{
-			long n = (long)(IntX)null;
-		}
+	    [Test]
+	    public void ConvertNullToLong()
+	    {
+	        Assert.Throws<ArgumentNullException>(() =>
+	        {
+	            long n = (long) (IntX) null;
+	        });
+	    }
 
-		[Test, ExpectedException(typeof(ArgumentNullException))]
-		public void ConvertNullToUlong()
-		{
-			ulong n = (ulong)(IntX)null;
-		}
+	    [Test]
+        public void ConvertNullToUlong()
+	    {
+	        Assert.Throws<ArgumentNullException>(() =>
+	        {
+	            ulong n = (ulong) (IntX) null;
+	        });
+	    }
 
-		[Test, ExpectedException(typeof(ArgumentNullException))]
-		public void ConvertNullToUshort()
-		{
-			ushort n = (ushort)(IntX)null;
-		}
+	    [Test]
+        public void ConvertNullToUshort()
+	    {
+	        Assert.Throws<ArgumentNullException>(() =>
+	        {
+	            ushort n = (ushort) (IntX) null;
+	        });
+	    }
 	}
 }

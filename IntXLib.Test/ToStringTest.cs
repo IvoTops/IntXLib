@@ -1,8 +1,9 @@
+
+
 using NUnit.Framework;
 
 namespace IntXLib.Test
 {
-	[TestFixture]
 	public class ToStringTest
 	{
 		[Test]

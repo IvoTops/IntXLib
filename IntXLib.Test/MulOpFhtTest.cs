@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace IntXLib.Test
 {
-	[TestFixture]
+	
 	public class MulOpFhtTest
 	{
 		const int StartLength     = 256;

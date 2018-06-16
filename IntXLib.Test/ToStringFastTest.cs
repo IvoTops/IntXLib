@@ -4,7 +4,7 @@ using NUnit.Framework;
 
 namespace IntXLib.Test
 {
-	[TestFixture]
+	
 	public class ToStringFastTest
 	{
 		const int StartLength     = 1024;

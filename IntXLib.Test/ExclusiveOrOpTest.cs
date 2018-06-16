@@ -1,8 +1,10 @@
-﻿using NUnit.Framework;
+﻿
+
+using NUnit.Framework;
 
 namespace IntXLib.Test
 {
-	[TestFixture]
+	
 	public class ExclusiveOrOpTest
 	{
 		[Test]

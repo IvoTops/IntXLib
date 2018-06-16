@@ -3,10 +3,10 @@ using NUnit.Framework;
 
 namespace IntXLib.Test
 {
-	[TestFixture]
+	
 	public class PowTest
 	{
-		[TestFixtureSetUp]
+		[OneTimeSetUp]
 		public void SetUp()
 		{
 			IntX.GlobalSettings.MultiplyMode = MultiplyMode.Classic;

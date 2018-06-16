@@ -3,25 +3,25 @@ using NUnit.Framework;
 
 namespace IntXLib.Test
 {
-	[TestFixture]
+	
 	public class CustomAlphabetTest
 	{
-		[Test, ExpectedException(typeof(ArgumentNullException))]
+		[Test]
 		public void AlphabetNull()
 		{
-			IntX.Parse("", 20, null);
+		    Assert.Throws<ArgumentNullException>(() => IntX.Parse("", 20, null));
 		}
 
-		[Test, ExpectedException(typeof(ArgumentException))]
+		[Test]
 		public void AlphabetShort()
 		{
-			IntX.Parse("", 20, "1234");
+		    Assert.Throws<ArgumentException>(() => IntX.Parse("", 20, "1234"));
 		}
 
-		[Test, ExpectedException(typeof(ArgumentException))]
+		[Test]
 		public void AlphabetRepeatingChars()
 		{
-			IntX.Parse("", 20, "0123456789ABCDEFGHIJ0");
+		    Assert.Throws<ArgumentException>(() => IntX.Parse("", 20, "0123456789ABCDEFGHIJ0"));
 		}
 		
 		[Test]

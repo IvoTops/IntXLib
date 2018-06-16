@@ -47,3 +47,8 @@ _ReSharper*/
 
 #NuGet
 packages/
+*.ide-wal
+/.vs/IntXLib/v15/Server/sqlite3/storage.ide-shm
+/.vs/IntXLib/v15/Server/sqlite3/storage.ide
+/.vs/IntXLib/v15/Server/sqlite3/db.lock
+/.vs/IntXLib/DesignTimeBuild/.dtbcache

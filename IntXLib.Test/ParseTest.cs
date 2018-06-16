@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace IntXLib.Test
 {
-	[TestFixture]
+	
 	public class ParseTest
 	{
 		[Test]
@@ -48,28 +48,28 @@ namespace IntXLib.Test
 			Assert.IsTrue(int1 == 0x80000000);
 		}
 		
-		[Test, ExpectedException(typeof(ArgumentNullException))]
+		[Test]
 		public void Null()
 		{
-			IntX.Parse(null);
+		    Assert.Throws<ArgumentNullException>(() => IntX.Parse(null));
 		}
 		
-		[Test, ExpectedException(typeof(FormatException))]
+		[Test]
 		public void InvalidFormat()
 		{
-			IntX.Parse("-123-");
+		    Assert.Throws<FormatException>(() => IntX.Parse("-123-"));
 		}
 		
-		[Test, ExpectedException(typeof(FormatException))]
+		[Test]
 		public void InvalidFormat2()
 		{
-			IntX.Parse("abc");
+		    Assert.Throws<FormatException>(() => IntX.Parse("abc"));
 		}
 		
-		[Test, ExpectedException(typeof(FormatException))]
+		[Test]
 		public void InvalidFormat3()
 		{
-			IntX.Parse("987", 2);
+		    Assert.Throws<FormatException>(() => IntX.Parse("987", 2));
 		}
 		
 		[Test]

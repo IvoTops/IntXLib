@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace IntXLib.Test
 {
-	[TestFixture]
+	
 	public class ConstructorTest
 	{
 		[Test]
@@ -30,10 +30,10 @@ namespace IntXLib.Test
 			new IntX(new uint[] { 1, 2, 3 }, true);
 		}
 		
-		[Test, ExpectedException(typeof(ArgumentNullException))]
+		[Test]
 		public void IntArrayNullCtor()
 		{
-			new IntX(null, false);
+		    Assert.Throws<ArgumentNullException>(()=> new IntX(null, false));
 		}
 	}
 }

@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace IntXLib.Test
 {
-	[TestFixture]
+	
 	public class DivOpTest
 	{
 		[Test]
@@ -50,16 +50,19 @@ namespace IntXLib.Test
 			int2 = -25;
 			Assert.IsTrue(int1 / int2 == 0);
 		}
-		
-		[Test, ExpectedException(typeof(DivideByZeroException))]
-		public void ZeroException()
-		{
-			IntX int1 = 0;
-			IntX int2 = 0;
-			int1 = int1 / int2;
-		}
-		
-		[Test]
+
+	    [Test]
+	    public void ZeroException()
+	    {
+	        Assert.Throws<DivideByZeroException>(() =>
+	        {
+	            IntX int1 = 0;
+	            IntX int2 = 0;
+	            int1 = int1 / int2;
+	        });
+	    }
+
+	    [Test]
 		public void Big()
 		{
 			IntX int1 = new IntX(new uint[] {0, 0, 0x80000000U, 0x7fffffffU}, false);

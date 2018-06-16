@@ -3,7 +3,7 @@ using NUnit.Framework;
 
 namespace IntXLib.Test
 {
-	[TestFixture]
+	
 	public class DivOpNewtonTest
 	{
 		const int StartLength     = 1024;

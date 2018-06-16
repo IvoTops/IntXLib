@@ -1,11 +1,13 @@
+
+
 using NUnit.Framework;
 
 namespace IntXLib.Test
 {
-	[TestFixture]
+	
 	public class MulOpTest
 	{
-		[TestFixtureSetUp]
+		[OneTimeSetUp]
 		public void SetUp()
 		{
 			IntX.GlobalSettings.MultiplyMode = MultiplyMode.Classic;
